@@ -1,0 +1,16 @@
+#This gives me a start and end for the range of numbers
+start = int(input("Give me a number: "))
+end = int(input("Give me another number: "))
+
+numbers = list(range(start, end +1)) #To make this range into a list
+
+#Modulo can also be used to look for multiples of a number instead of just checking for divisibility
+for num in numbers:
+    if num % 3 == 0 and num % 5 == 0:
+        print("FizzBuzz")
+    elif num % 3 == 0 and num % 5 != 0: #If I use if instead of elif, it won't replace num with the str
+        print("Fizz")
+    elif num % 3 != 0 and num % 5 == 0:
+        print("Buzz")
+    else:
+        print(num) #To print out the other numbers!
